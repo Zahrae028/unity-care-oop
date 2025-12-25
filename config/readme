@@ -1,0 +1,163 @@
+# Unity Care Clinic – CLI (PHP OOP)
+
+Unity Care Clinic CLI is a **console-based internal management system** built in **PHP 8 (Object-Oriented Programming)**.  
+It allows fast management of **patients, doctors, and departments** without using the web interface.
+
+---
+
+## 🚀 Features
+
+- PHP 8 **OOP architecture**
+- CLI interactive menu
+- CRUD for:
+  - Patients
+  - Doctors
+  - Departments
+- MySQL database (MySQLi OOP)
+- Data validation (emails, phones, dates)
+- ASCII table display
+- Statistics dashboard
+- Clean and extensible structure
+
+---
+
+## 🧱 Technologies Used
+
+- PHP 8
+- MySQL
+- MySQLi (OOP)
+- CLI (Command Line Interface)
+
+---
+
+## 📁 Project Structure
+
+unity-care-cli/
+│
+├── config/
+│ └── database.php
+│
+├── interfaces/
+│ └── Displayable.php
+│
+├── models/
+│ ├── BaseModel.php
+│ ├── Personne.php
+│ ├── Patient.php
+│ ├── Doctor.php
+│ └── Department.php
+│
+├── utils/
+│ ├── Validator.php
+│ └── ConsoleTable.php
+│
+├── cli/
+│ ├── menu.php
+│ ├── patients.php
+│ ├── doctors.php
+│ ├── departments.php
+│ └── statistics.php
+│
+├── sql/
+│ └── install.sql
+│
+├── index.php
+└── README.md
+
+yaml
+Copier le code
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/unity-care-cli.git
+cd unity-care-cli
+2️⃣ Create the database
+Open MySQL
+
+Run the script:
+
+sql
+Copier le code
+source sql/install.sql;
+3️⃣ Configure database connection
+Edit:
+
+php
+Copier le code
+config/database.php
+php
+Copier le code
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'unity_care');
+▶️ Run the Application
+bash
+Copier le code
+php index.php
+🧭 Main Menu
+markdown
+Copier le code
+=== Unity Care CLI ===
+1. Manage Patients
+2. Manage Doctors
+3. Manage Departments
+4. Statistics
+5. Exit
+📊 Statistics Available
+Average patient age
+
+Average doctor years of service
+
+Most populated department
+
+Patient count by department
+
+🧪 Validation
+All inputs are validated using a static Validator class:
+
+Email format
+
+Phone format
+
+Date format
+
+Empty values
+
+Input sanitization
+
+🧠 OOP Concepts Used
+Encapsulation (private properties)
+
+Inheritance (BaseModel, Personne)
+
+Interfaces (Displayable)
+
+Static methods (statistics, validation)
+
+Singleton pattern (Database)
+
+DRY principle
+
+📄 UML & ERD
+UML Class Diagram
+
+Use Case Diagram
+
+ERD Diagram
+(Included in the project documentation)
+
+
+
+Project: Unity Care Clinic CLI
+
+Context: PHP OOP Training Project
+
+✅ Status
+✔️ Functional
+✔️ OOP compliant
+✔️ Ready for presentation

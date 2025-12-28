@@ -11,17 +11,38 @@ class Person
 
 
 
-     public function __construct($firstName , $lastName , $email ,$phone)
-    {
-       $this->firstName = $firstName;
-       $this->lastName = $lastName;
-       $this->email = $email;
-       $this->phone = $phone;
-    }
-
-    public function setFullName($firstName , $lastName)
+    public function __construct($firstName, $lastName, $email, $phone)
     {
         $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->email = $email;
+        $this->phone = $phone;
+    }
+
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+    public function getEmail()
+    {
+        return $this->email;
+    }
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+     public function setLastName($lastName)
+    {
         $this->lastName = $lastName;
     }
 
@@ -33,6 +54,9 @@ class Person
     {
         $this->phone = $phoneParam;
     }
+
+
+
 }
 
 

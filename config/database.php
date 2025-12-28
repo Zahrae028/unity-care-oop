@@ -26,11 +26,11 @@ class Database
     }
 }
 
-$test = new Database("localhost" , "root", "" ,"unity_care");
+$test = new Database("localhost" , "root", "" ,"oop-uc");
 $test2 = $test->connection();
-if ($test2) {
-    echo "wada7mad";
-}
+// if ($test2) {
+//     echo "wada7mad";
+// }
 
 
 ?>

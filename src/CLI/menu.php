@@ -20,6 +20,9 @@ include './depCrud/searchDep.php';
 include './depCrud/editDep.php';
 include './depCrud/deleteDep.php';
 
+include 'populatedDep.php';
+include 'doctorCount.php';
+
 
 class Menu
 {
@@ -148,6 +151,33 @@ class Menu
                             echo "Invalid choice. Please try again.\n";
                             break;
                     }
+
+
+                case '4': // Statistics
+                    echo "=== Statistics ===
+                    1. Most populated department (by doctors)
+                    2. Doctor count by department
+                    3. Back";
+
+                    $choice = trim(fgets(STDIN));
+
+                    switch ($choice) {
+                        case '1':
+                            popDep($this->pdo);
+                            break;
+
+                        case '2':
+                            countDoc($this->pdo);
+                            break;
+
+                        case '3': 
+                            break;
+
+                        default:
+                            echo "Invalid choice. Please try again.\n";
+                            break;
+                    }
+
                 case '0':
 
                     break;
